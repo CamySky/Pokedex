@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes Pokemons</title>
+</head>
+
+<body>
+    <h1><%= pokemon.name %></h1>
+    <img src="<%= pokemon.sprites.front_shiny %>" alt="<%= pokemon.name %>">
+    <img src="<%= pokemon.sprites.back_shiny %>" alt="<%= pokemon.name %>">
+    <p>Tipo(s): <%= pokemon.types.map(type=> type.type.name).join(', ') %></p>
+    <p>Habilidade(s): <%= pokemon.abilities.map(ability => ability.ability.name).join(', ') %></p>
+    <p>Peso: <%= pokemon.weight %> hectogramas</p>
+    <a href="/">Voltar à lista</a>
+</body>
+
+</html>
